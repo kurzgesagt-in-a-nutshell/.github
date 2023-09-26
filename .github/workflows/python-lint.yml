@@ -1,12 +1,7 @@
 name: Reusable Python Lint
 
 on: 
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - '**'
+  workflow_call:
 
 jobs:
   lint:
