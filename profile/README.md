@@ -1,4 +1,5 @@
-## 🌈 Under Construction 🌈 We Open Soon!
+## 🌈 Under Construction 🌈 
+## We Open Soon!
 
 <!--
 
