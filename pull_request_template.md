@@ -1,4 +1,9 @@
-# Pull Request
+<!--
+!!!IMPORTANT!!!
+We recommend you fill in as many fields as possible but we understand thats its not always viable 
+You should REMOVE ALL UNUSED SECTIONS in this template before raising a request
+-->
+# PR_TITLE_HERE
 
 ## Description
 <!-- Provide a concise description of the changes introduced by this pull request. -->
@@ -15,7 +20,6 @@
 <!-- Before submitting this pull request, make sure you've completed the following tasks and check the boxes that apply. -->
 
 - [ ] This PR makes changes to the code
-    - [ ] I have updated the documentation to reflect the changes.
     - [ ] I have tested my changes locally and they work as expected.
     - [ ] I have ensured that the code is free of linting errors and warnings.
     - [ ] I have added any necessary comments or explanations to the code.
