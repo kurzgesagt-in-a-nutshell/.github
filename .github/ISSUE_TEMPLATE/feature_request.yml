@@ -1,0 +1,35 @@
+name: Feature Request
+description: Create a feature request
+title: "[Feature]: "
+labels: ["feature"]
+projects: ["kurzgesagt-in-a-nutshell/*"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to create a feature request! Please make sure this request is not a duplicate and all questions are filled out thoroughly.
+  - type: input
+    id: contact
+    attributes:
+      label: Discord Contact Details
+      description: Please provide us with your discord ID and join the [kurzgesagt server](https://discord.gg/kurzgesagt) if you haven't already
+      placeholder: eg. 183092910495891467
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: What feature or improvement is being requested?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What problem does this address?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How would this solve the problem?
+    validations:
+      required: true
