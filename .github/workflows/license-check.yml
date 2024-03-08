@@ -15,5 +15,5 @@ jobs:
         uses: viperproject/check-license-header@v2
         with:
           path: .
-          config: kurzgesagt-in-a-nutshell/.github/.github/workflows/license-check-config.json@license-check
+          config: license-check-config.json
           strict: false
