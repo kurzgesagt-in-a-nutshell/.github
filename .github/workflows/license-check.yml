@@ -2,10 +2,6 @@ name: Reusable License Checker
 
 on: 
   workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
   
 jobs:
   license-check:
@@ -19,5 +15,5 @@ jobs:
         uses: viperproject/check-license-header@v2
         with:
           path: .
-          config: ${{ inputs.config_path }}
+          config: kurzgesagt-in-a-nutshell/.github/.github/workflows/license-check-config.json@license-check
           strict: false
