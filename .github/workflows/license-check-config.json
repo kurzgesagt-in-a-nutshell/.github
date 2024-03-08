@@ -1,0 +1,24 @@
+[
+    {
+        "include": [
+            "**/*.py"
+        ],
+        "license": ".github/license-headers/license-header-py.txt"
+    },
+    {
+        "include": [
+            "**/*.js",
+            "**/*.ts"
+        ],
+        "license": ".github/license-headers/license-header-js.txt"
+    },
+    {
+        "include": [
+            "**/*.txt",
+            "**/*.service",
+            "**/*.toml",
+            "**/*.json",
+            "LICENSE"
+        ]
+    }
+]
