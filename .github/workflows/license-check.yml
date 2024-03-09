@@ -15,7 +15,7 @@ jobs:
         with:
           repository: kurzgesagt-in-a-nutshell/.github
           path: license-config
-          ref: license
+          ref: license-check
         
       - name: Check license headers
         uses: viperproject/check-license-header@v2
