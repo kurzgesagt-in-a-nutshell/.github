@@ -3,14 +3,14 @@
         "include": [
             "**/*.py"
         ],
-        "license": ".github/license-headers/license-header-py.txt"
+        "license": "./license-config/.github/license-headers/license-header-py.txt"
     },
     {
         "include": [
             "**/*.js",
             "**/*.ts"
         ],
-        "license": ".github/license-headers/license-header-js.txt"
+        "license": "./license-config/.github/license-headers/license-header-js.txt"
     },
     {
         "include": [
