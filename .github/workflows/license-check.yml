@@ -18,6 +18,6 @@ jobs:
       - name: Check license headers
         uses: viperproject/check-license-header@v2
         with:
-          path: .
-          config: license-check-config.json
+          path: ./
+          config: ./.github/license-headers/license-check-config.json
           strict: false
