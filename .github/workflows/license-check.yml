@@ -15,7 +15,10 @@ jobs:
         with:
           repository: kurzgesagt-in-a-nutshell/.github
           path: license-config
-
+          
+      - name: XDTesting Print Directory Structure
+        uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
+        
       - name: Check license headers
         uses: viperproject/check-license-header@v2
         with:
