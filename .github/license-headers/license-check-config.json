@@ -18,6 +18,7 @@
             "**/*.service",
             "**/*.toml",
             "**/*.json",
+             "**/*.md",
             "LICENSE"
         ]
     }
