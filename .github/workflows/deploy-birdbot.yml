@@ -7,6 +7,13 @@ jobs:
   deploy-prod:
     runs-on: self-hosted
     steps:
+      - name: Configure GH
+        env:
+          PAT: ${{ secrets.PAT }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          git config remote.origin.url 'https://$PAT@github.com/$REPOSITORY'
+
       - name: Pull Updated Code
         run: |
           cd /opt/kurzgesagt/kurzgesagt_bot_refactor && git pull origin public-refactor
