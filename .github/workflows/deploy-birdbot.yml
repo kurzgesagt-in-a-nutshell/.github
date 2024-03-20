@@ -8,19 +8,18 @@ jobs:
     runs-on: self-hosted
     steps:
 
-      - name: Checkout Repo
-        run: |
-          cd /opt/kurzgesagt/kurzgesagt_bot_refactor
-
       - name: Configure GH
         env:
           PAT: ${{ secrets.PAT }}
           REPOSITORY: ${{ github.repository }}
         run: |
           git config remote.origin.url 'https://$PAT@github.com/$REPOSITORY'
+          working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
+
       - name: Pull Updated Code
         run: |  
           git pull origin public-refactor
+          working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
           
       - name: Restart Service
         run: |
