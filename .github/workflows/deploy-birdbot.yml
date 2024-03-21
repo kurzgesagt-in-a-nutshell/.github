@@ -13,7 +13,7 @@ jobs:
           PAT: ${{ secrets.PAT }}
           REPOSITORY: ${{ github.repository }}
         run: |
-          git config remote.origin.url 'https://$PAT@github.com/$REPOSITORY'
+          git config remote.origin.url "https://${PAT}@github.com/${REPOSITORY}"
         working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
 
       - name: Pull Updated Code
