@@ -15,4 +15,4 @@ jobs:
           
       - name: Restart Service
         run: |
-          sudo systemctl restart birdbot.service
+          sudo systemctl restart birdbot-test.service
