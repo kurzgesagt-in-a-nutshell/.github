@@ -11,7 +11,7 @@ jobs:
 
       - name: Pull Updated Code
         run: |  
-          git pull origin public-refactor
+          git pull origin master
         working-directory: /opt/kurzgesagt/kurzgesagt_bot
           
       - name: Restart Service
@@ -19,7 +19,7 @@ jobs:
           sudo systemctl restart birdbot.service
           
   deploy-staging:
-    if: ${{ github.ref_name == 'staging' || 'public-refactor' }}
+    if: ${{ github.ref_name == 'staging' || 'public-refactor' || 'staging-deploy'}}
     runs-on: self-hosted
     steps:
 
