@@ -5,6 +5,21 @@ on:
 
 jobs:
   deploy-prod:
+    if: ${{ github.ref_name == 'master' }}
+    runs-on: self-hosted
+    steps:
+
+      - name: Pull Updated Code
+        run: |  
+          git pull origin public-refactor
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot
+          
+      - name: Restart Service
+        run: |
+          sudo systemctl restart birdbot.service
+          
+  deploy-staging:
+    if: ${{ github.ref_name == 'staging' || 'public-refactor' }}
     runs-on: self-hosted
     steps:
 
@@ -15,4 +30,4 @@ jobs:
           
       - name: Restart Service
         run: |
-          sudo systemctl restart birdbot-test.service
+          sudo systemctl start birdbot-test.service
