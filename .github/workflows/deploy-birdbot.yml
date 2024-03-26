@@ -14,11 +14,15 @@ jobs:
           git pull origin master
         working-directory: /opt/kurzgesagt/kurzgesagt_bot
 
+      - name: Activate venv
+        run: |
+          source activate
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot/birdbot/bin
+        
       - name: Update Deps
         run: |
-          pip install -r requirements.txt
+          ./birdbot/bin/pip install -r requirements.txt
         working-directory: /opt/kurzgesagt/kurzgesagt_bot
-
           
       - name: Restart Service
         run: |
@@ -33,12 +37,16 @@ jobs:
         run: |  
           git pull origin public-refactor
         working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
-
+        
+      - name: Activate venv
+        run: |
+          source activate
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot/birdbot-refactor/bin
+        
       - name: Update Deps
         run: |
-          pip install -r requirements.txt
+          ./birdbot-refactor/bin/pip install -r requirements.txt
         working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
-
           
       - name: Restart Service
         run: |
