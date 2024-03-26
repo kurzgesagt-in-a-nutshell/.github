@@ -17,6 +17,8 @@ jobs:
       - name: Update Deps
         run: |
           pip install -r requirements.txt
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot
+
           
       - name: Restart Service
         run: |
@@ -35,6 +37,8 @@ jobs:
       - name: Update Deps
         run: |
           pip install -r requirements.txt
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
+
           
       - name: Restart Service
         run: |
