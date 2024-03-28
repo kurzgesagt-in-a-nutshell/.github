@@ -35,13 +35,13 @@ jobs:
 
       - name: Pull Updated Code
         run: |  
-          git pull origin public-refactor
+          git pull origin staging
         working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
         
       - name: Activate venv
         run: |
           source activate
-        working-directory: /opt/kurzgesagt/kurzgesagt_bot/birdbot-refactor/bin
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor/birdbot-refactor/bin
         
       - name: Update Deps
         run: |
