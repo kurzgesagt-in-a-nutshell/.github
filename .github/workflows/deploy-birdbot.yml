@@ -1,0 +1,53 @@
+name: Reusable Birdbot Deploy
+
+on:
+  workflow_call:
+
+jobs:
+  deploy-prod:
+    if: ${{ github.ref_name == 'master' }}
+    runs-on: self-hosted
+    steps:
+
+      - name: Pull Updated Code
+        run: |  
+          git pull origin master
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot
+
+      - name: Activate venv
+        run: |
+          source activate
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot/birdbot/bin
+        
+      - name: Update Deps
+        run: |
+          ./birdbot/bin/pip install -r requirements.txt
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot
+          
+      - name: Restart Service
+        run: |
+          sudo systemctl restart birdbot.service
+          
+  deploy-staging:
+    if: ${{ github.ref_name == 'staging' || 'public-refactor' || 'staging-deploy'}}
+    runs-on: self-hosted
+    steps:
+
+      - name: Pull Updated Code
+        run: |  
+          git pull origin staging
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
+        
+      - name: Activate venv
+        run: |
+          source activate
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor/birdbot-refactor/bin
+        
+      - name: Update Deps
+        run: |
+          ./birdbot-refactor/bin/pip install -r requirements.txt
+        working-directory: /opt/kurzgesagt/kurzgesagt_bot_refactor
+          
+      - name: Restart Service
+        run: |
+          sudo systemctl restart birdbot-test.service
