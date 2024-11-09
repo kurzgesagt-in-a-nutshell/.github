@@ -20,10 +20,10 @@ Before contributing, take a moment to review our [general contributor guidelines
 # 📖 Current Public Projects
 - ### [BirdBot](https://github.com/kurzgesagt-in-a-nutshell/birdbot)
    BirdBot is designed to lighten the load for our moderators while bringing fun and useful features to all server members. Want to get involved? You can contribute code to BirdBot or fork the repository to create your own custom version for your server!
-- ### [.github repository](https://github.com/kurzgesagt-in-a-nutshell/birdbot)
+- ### [.github repository](https://github.com/kurzgesagt-in-a-nutshell/.github)
    The `.github` repository in a GitHub organization is a special repository that holds configuration files for the entire organization. These configuration files control various aspects of how the organization functions on GitHub, but typically don't contain any code related to specific projects.
   
-   In our case you can find files relating to various github templates like Pull Requests, Issues etc and also the files for all our github actions workflows
+   In our case you can find files relating to various github templates like Pull Requests, Issues etc and also the files for all our github actions workflows.
 
 # Projects to be Public Soon 
 - ### birdbot.xyz Frontend
